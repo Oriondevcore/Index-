@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Orion Dev Core | AI Amplifies. I Create. Custom Legal AI Solutions.">
+    <meta name="description" content="Orion Dev Core | AI Amplifies. I Create. Custom Legal, Hospitality & Business AI Solutions.">
     <title>ORION DEV CORE | AI Amplifies. I Create.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -30,23 +30,12 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
 
-        /* HERO SECTION */
-        #hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
-            padding: 100px 0;
-        }
+        /* BUTTONS */
+        .btn { padding: 1rem 2.5rem; text-transform: uppercase; font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-decoration: none; transition: 0.4s; border-radius: 2px; display: inline-block; cursor: pointer; }
+        .btn-primary { background: var(--gold-gradient); color: #000; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5); }
 
-        .hero-brand { font-size: 3.5rem; letter-spacing: 5px; margin-bottom: 0.5rem; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-subtitle { font-size: 1.5rem; color: var(--core-gold); font-style: italic; margin-bottom: 1.5rem; }
-        .hero-tagline { font-weight: 300; color: #888; max-width: 600px; margin-bottom: 3rem; font-size: 1.1rem; }
-
-        /* QR CODE CARD */
+        /* QR CARDS */
         .qr-card {
             background: rgba(0,0,0,0.8); 
             padding: 20px; 
@@ -55,26 +44,31 @@
             text-align: center; 
             box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
             margin-bottom: 20px;
-            animation: float 6s ease-in-out infinite;
+            transition: transform 0.3s ease;
         }
+        .qr-card:hover { transform: translateY(-5px); }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+        /* SECTIONS */
+        section { padding: 80px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+        .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; color: #fff; }
+        .section-desc { color: #888; max-width: 600px; margin: 0 auto 3rem auto; font-size: 1rem; text-align: center; font-weight: 300; }
+
+        /* HERO SECTION (LEGAL) */
+        #hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            padding-top: 120px;
         }
+        .hero-brand { font-size: 3.5rem; letter-spacing: 5px; margin-bottom: 0.5rem; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-subtitle { font-size: 1.5rem; color: var(--core-gold); font-style: italic; margin-bottom: 1.5rem; }
 
-        /* BUTTONS */
-        .btn { padding: 1rem 2.5rem; text-transform: uppercase; font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-decoration: none; transition: 0.4s; border-radius: 2px; display: inline-block; cursor: pointer; }
-        .btn-primary { background: var(--gold-gradient); color: #000; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5); }
-
-        /* SECTION STYLING */
-        section { padding: 100px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
-        .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 4rem; color: #fff; }
-
-        /* PRODUCT MODULES */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        /* PRODUCT MODULES GRID */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
         .card { 
             background: var(--glass); 
             padding: 3rem; 
@@ -88,15 +82,7 @@
 
         /* FOUNDER SECTION */
         .founder-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center; }
-        
-        .founder-img { 
-            width: 100%; 
-            aspect-ratio: 1; 
-            object-fit: cover; 
-            border: 1px solid var(--core-gold); 
-            box-shadow: 10px 10px 0px rgba(212, 175, 55, 0.1);
-        }
-        
+        .founder-img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid var(--core-gold); box-shadow: 10px 10px 0px rgba(212, 175, 55, 0.1); }
         .quote { font-style: italic; font-size: 1.5rem; color: #eee; margin-bottom: 1.5rem; line-height: 1.4; }
 
         footer { padding: 50px 0; text-align: center; font-size: 0.7rem; letter-spacing: 2px; color: #555; }
@@ -114,9 +100,9 @@
     <div class="container">
         <h1 class="hero-brand">ORION DEV CORE</h1>
         <p class="hero-subtitle">AI Amplifies. I Create.</p>
-        <p class="hero-tagline">We build the next generation of AI-driven business solutions. Scan below to launch the Orion Legal Shield.</p>
+        <p class="section-desc">We build the next generation of AI-driven business solutions. Scan below to launch the Orion Legal Shield.</p>
         
-        <div class="cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-top: 2rem;">
+        <div class="cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
             
             <div class="qr-card">
                 <p style="color: #D4AF37; font-size: 0.8rem; margin-bottom: 10px; letter-spacing: 2px; font-weight: bold;">SCAN TO LAUNCH AI</p>
@@ -126,10 +112,79 @@
             </div>
 
             <a href="https://script.google.com/macros/s/AKfycbytAzynBe72THD6a74fb3onNADJ58UHRxtMRh3hJiCygrq498K9qH2L_8PVAmw6NQUV/exec?mode=demo" 
-               class="btn btn-primary" 
-               target="_blank"
-               style="text-align: center; min-width: 250px;">
+               class="btn btn-primary" target="_blank" style="min-width: 250px;">
                📱 TAP TO LAUNCH DEMO
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="hotel-demo" style="background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%);">
+    <div class="container" style="text-align: center;">
+        
+        <h2 class="section-title">ZAR Digital Concierge</h2>
+        <p class="section-desc">Elevate guest experiences with 24/7 AI. Instant bookings, room service, and local recommendations in any language.</p>
+        
+        <div class="cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+            
+            <div class="qr-card">
+                <p style="color: #D4AF37; font-size: 0.8rem; margin-bottom: 10px; letter-spacing: 2px; font-weight: bold;">SCAN FOR CONCIERGE</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=D4AF37&bgcolor=000000&data=https://script.google.com/macros/s/AKfycbys8jhnh8y9R_hsVK8E5su2d7PFhZUqUsJizatM2IZ5tpmP7pr-tYxhI6GDS7LHTUC3/exec" 
+                     alt="Hotel AI Demo QR" 
+                     style="border: 1px solid #333; padding: 5px; background: #000; border-radius: 5px;">
+            </div>
+
+            <a href="https://script.google.com/macros/s/AKfycbys8jhnh8y9R_hsVK8E5su2d7PFhZUqUsJizatM2IZ5tpmP7pr-tYxhI6GDS7LHTUC3/exec" 
+               class="btn btn-primary" target="_blank" style="min-width: 250px;">
+               🛎️ LAUNCH HOTEL DEMO
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="abs-demo" style="background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);">
+    <div class="container" style="text-align: center;">
+        
+        <h2 class="section-title">Orion Business Core (ABS)</h2>
+        <p class="section-desc">The ultimate mobile POS. Capture customer details, enter custom products, sign digitally on-screen, and generate instant payment links.</p>
+        
+        <div class="cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+            
+            <div class="qr-card">
+                <p style="color: #D4AF37; font-size: 0.8rem; margin-bottom: 10px; letter-spacing: 2px; font-weight: bold;">SCAN TO ENTER ABS</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=D4AF37&bgcolor=000000&data=https://geemcneel-png.github.io/ODC_ABS/" 
+                     alt="Orion ABS Demo QR" 
+                     style="border: 1px solid #333; padding: 5px; background: #000; border-radius: 5px;">
+            </div>
+
+            <a href="https://geemcneel-png.github.io/ODC_ABS/" 
+               class="btn btn-primary" target="_blank" style="min-width: 250px;">
+               💳 LAUNCH POS SYSTEM
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="hq-command" style="background: linear-gradient(180deg, #000 0%, #111 100%); border-top: 1px solid rgba(212, 175, 55, 0.1);">
+    <div class="container" style="text-align: center;">
+        
+        <h2 class="section-title">Orion HQ Command</h2>
+        <p class="section-desc">
+            Direct uplink to Orion Central. Request custom development, secure your AI package, or initiate a priority consultation.
+        </p>
+        
+        <div class="cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+            
+            <div class="qr-card" style="box-shadow: 0 0 40px rgba(212, 175, 55, 0.05);">
+                <p style="color: #D4AF37; font-size: 0.8rem; margin-bottom: 10px; letter-spacing: 2px; font-weight: bold;">SCAN TO INITIATE</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=D4AF37&bgcolor=000000&data=https://script.google.com/macros/s/AKfycbzng3-TTXLF06upce_qbB2_h3q8e-raAY_uW1wJeXUs7fn8VBQA3z3d9HPeMUplIWu21w/exec" 
+                     alt="Orion HQ QR" 
+                     style="border: 1px solid #333; padding: 5px; background: #000; border-radius: 5px;">
+            </div>
+
+            <a href="https://script.google.com/macros/s/AKfycbzng3-TTXLF06upce_qbB2_h3q8e-raAY_uW1wJeXUs7fn8VBQA3z3d9HPeMUplIWu21w/exec" 
+               class="btn btn-primary" target="_blank" style="min-width: 250px;">
+               📡 OPEN COMMAND CENTER
             </a>
 
         </div>
