@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Orion Dev Core | AI Amplifies. I Create.">
+    <meta name="description" content="Orion Dev Core | Powered by Gemini 2.0 Flash">
     <title>ORION DEV CORE | AI Amplifies. I Create.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -21,156 +21,123 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
         
         /* BUTTONS */
-        .btn { padding: 1rem 2.5rem; text-transform: uppercase; font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-decoration: none; transition: 0.4s; border-radius: 2px; display: inline-block; cursor: pointer; border: none; }
-        .btn-primary { background: var(--gold-gradient); color: #000; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5); }
-
-        /* QR CARDS */
-        .qr-card { background: rgba(0,0,0,0.8); padding: 20px; border: 1px solid var(--core-gold); border-radius: 10px; text-align: center; box-shadow: 0 0 30px rgba(212, 175, 55, 0.15); margin-bottom: 20px; transition: transform 0.3s ease; }
-        .qr-card:hover { transform: translateY(-5px); }
+        .btn { padding: 1.2rem 2rem; text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-decoration: none; transition: 0.4s; border-radius: 4px; display: inline-block; cursor: pointer; border: none; text-align: center; }
+        .btn-primary { background: var(--gold-gradient); color: #000; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); width: 100%; max-width: 300px; }
+        .btn-invest { background: transparent; color: var(--core-gold); border: 1px solid var(--core-gold); margin-top: 15px; width: 100%; max-width: 300px; }
 
         /* SECTIONS */
         section { padding: 80px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
-        .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; color: #fff; }
-        .section-desc { color: #888; max-width: 600px; margin: 0 auto 3rem auto; font-size: 1rem; text-align: center; font-weight: 300; }
+        .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; }
+        .section-desc { color: #aaa; max-width: 700px; margin: 0 auto 3rem auto; text-align: center; font-weight: 300; }
+
+        /* PRODUCT CARDS */
+        .qr-card { background: rgba(10,10,10,0.9); padding: 25px; border: 1px solid var(--core-gold); border-radius: 12px; text-align: center; margin-bottom: 2rem; }
+        .feature-tag { font-size: 0.7rem; color: var(--core-gold); letter-spacing: 2px; text-transform: uppercase; font-weight: bold; margin-bottom: 10px; display: block; }
+
+        /* FOUNDER & IMPACT */
+        .founder-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
+        .founder-img { width: 100%; border: 1px solid var(--core-gold); }
+        .quote { font-style: italic; font-size: 1.4rem; color: #eee; border-left: 3px solid var(--core-gold); padding-left: 20px; margin-bottom: 2rem; }
+        .impact-box { background: rgba(212,175,55,0.05); padding: 25px; border-radius: 8px; border: 1px dashed var(--core-gold); }
 
         /* FORM */
-        .contact-form { background: var(--glass); padding: 40px; border: 1px solid rgba(212, 175, 55, 0.3); max-width: 600px; margin: 0 auto; border-radius: 4px; }
-        .form-group { margin-bottom: 20px; text-align: left; }
-        .form-control { width: 100%; padding: 15px; background: #0a0a0a; border: 1px solid #333; color: #fff; font-family: 'Inter', sans-serif; }
-        .form-control:focus { outline: none; border-color: var(--core-gold); }
-        label { display: block; margin-bottom: 8px; color: var(--core-gold); font-size: 0.8rem; letter-spacing: 1px; }
-
-        /* HERO */
-        #hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%); padding-top: 120px; }
-        .hero-brand { font-size: 3.5rem; letter-spacing: 5px; margin-bottom: 0.5rem; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-subtitle { font-size: 1.5rem; color: var(--core-gold); font-style: italic; margin-bottom: 1.5rem; }
-
-        /* FOUNDER */
-        .founder-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center; }
-        .founder-img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 1px solid var(--core-gold); box-shadow: 10px 10px 0px rgba(212, 175, 55, 0.1); }
-        .quote { font-style: italic; font-size: 1.5rem; color: #eee; margin-bottom: 1.5rem; line-height: 1.4; }
+        .contact-form { background: var(--glass); padding: 30px; border: 1px solid rgba(212, 175, 55, 0.3); max-width: 600px; margin: 0 auto; }
+        .form-control { width: 100%; padding: 15px; background: #0a0a0a; border: 1px solid #333; color: #fff; margin-bottom: 20px; }
 
         /* MODALS */
-        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); overflow-y: auto; }
-        .modal-content { background-color: #111; margin: 5% auto; padding: 40px; border: 1px solid var(--core-gold); width: 80%; max-width: 800px; color: #ccc; font-size: 0.9rem; }
-        .close-modal { color: var(--core-gold); float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
-        .legal-link { color: #888; text-decoration: none; border-bottom: 1px dotted #888; cursor: pointer; margin: 0 10px; }
-        .legal-link:hover { color: var(--core-gold); border-color: var(--core-gold); }
-        
-        footer { padding: 50px 0; text-align: center; font-size: 0.7rem; letter-spacing: 2px; color: #555; }
-        @media (max-width: 768px) { .hero-brand { font-size: 2.5rem; } .founder-grid { grid-template-columns: 1fr; text-align: center; } .founder-img { max-width: 250px; margin: 0 auto; } }
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
+        .modal-content { background: #111; margin: 10% auto; padding: 40px; border: 1px solid var(--core-gold); width: 90%; max-width: 800px; }
+        .close-modal { color: var(--core-gold); float: right; font-size: 28px; cursor: pointer; }
+
+        @media (max-width: 768px) { .founder-grid { grid-template-columns: 1fr; } .hero-brand { font-size: 2.5rem; } }
     </style>
 </head>
 <body>
 
-<section id="hero">
+<section id="hero" style="text-align: center; padding-top: 120px;">
     <div class="container">
-        <h1 class="hero-brand">ORION DEV CORE</h1>
-        <p class="hero-subtitle">AI Amplifies. I Create.</p>
-        <p class="section-desc">We build the next generation of AI-driven business solutions. Scan below to launch the Orion Legal Shield.</p>
-        <div class="cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
-            <div class="qr-card">
-                <p style="color: #D4AF37; font-size: 0.8rem; margin-bottom: 10px; letter-spacing: 2px; font-weight: bold;">SCAN TO LAUNCH AI</p>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=D4AF37&bgcolor=000000&data=https://script.google.com/macros/s/AKfycbytAzynBe72THD6a74fb3onNADJ58UHRxtMRh3hJiCygrq498K9qH2L_8PVAmw6NQUV/exec?mode=demo" alt="Legal QR" style="border: 1px solid #333; padding: 5px; background: #000; border-radius: 5px;">
-            </div>
-            <a href="https://script.google.com/macros/s/AKfycbytAzynBe72THD6a74fb3onNADJ58UHRxtMRh3hJiCygrq498K9qH2L_8PVAmw6NQUV/exec?mode=demo" class="btn btn-primary" target="_blank" style="min-width: 250px;">📱 TAP TO LAUNCH DEMO</a>
+        <h1 class="hero-brand" style="background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 3.5rem;">ORION DEV CORE</h1>
+        <p style="color: var(--core-gold); font-style: italic; font-size: 1.2rem; margin-bottom: 2rem;">AI Amplifies. I Create.</p>
+        <p class="section-desc">Harnessing 25 years of operational excellence to deliver high-speed business solutions powered by Gemini 2.0 Flash.</p>
+        
+        <div class="qr-card" style="max-width: 350px; margin: 0 auto;">
+            <span class="feature-tag">Legal Shield AI Demo</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=D4AF37&bgcolor=0a0a0a&data=https://script.google.com/macros/s/AKfycbytAzynBe72THD6a74fb3onNADJ58UHRxtMRh3hJiCygrq498K9qH2L_8PVAmw6NQUV/exec?mode=demo" alt="QR" style="margin-bottom: 20px;">
+            <a href="https://script.google.com/macros/s/AKfycbytAzynBe72THD6a74fb3onNADJ58UHRxtMRh3hJiCygrq498K9qH2L_8PVAmw6NQUV/exec?mode=demo" class="btn btn-primary" target="_blank">📱 Launch Legal AI</a>
+            <button class="btn btn-invest" onclick="openModal('investorModal')">📈 Investment Opportunities</button>
         </div>
     </div>
 </section>
 
-<section id="hotel-demo">
-    <div class="container" style="text-align: center;">
-        <h2 class="section-title">ZAR Hotel</h2>
-        <p class="section-desc">Experience the ZAR Hotel demo. We replace this with <strong>YOUR BRAND</strong> to create a custom guest experience.</p>
-        <div class="cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+<section id="products">
+    <div class="container">
+        <h2 class="section-title">The Suite</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
             <div class="qr-card">
-                <p style="color: #D4AF37; font-size: 0.8rem; margin-bottom: 10px; letter-spacing: 2px; font-weight: bold;">SCAN FOR CONCIERGE</p>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=D4AF37&bgcolor=000000&data=https://script.google.com/macros/s/AKfycbys8jhnh8y9R_hsVK8E5su2d7PFhZUqUsJizatM2IZ5tpmP7pr-tYxhI6GDS7LHTUC3/exec" alt="Hotel QR" style="border: 1px solid #333; padding: 5px; background: #000; border-radius: 5px;">
+                <span class="feature-tag">Hospitality</span>
+                <h3>ZAR Hotel Concierge</h3>
+                <p style="font-size: 0.9rem; color: #888; margin: 15px 0;">Live chat & bookings powered by Gemini 2.0 Flash.</p>
+                <a href="https://script.google.com/macros/s/AKfycbys8jhnh8y9R_hsVK8E5su2d7PFhZUqUsJizatM2IZ5tpmP7pr-tYxhI6GDS7LHTUC3/exec" class="btn btn-primary" target="_blank">🛎️ Concierge Demo</a>
             </div>
-            <a href="https://script.google.com/macros/s/AKfycbys8jhnh8y9R_hsVK8E5su2d7PFhZUqUsJizatM2IZ5tpmP7pr-tYxhI6GDS7LHTUC3/exec" class="btn btn-primary" target="_blank" style="min-width: 250px;">🛎️ LAUNCH HOTEL DEMO</a>
+            <div class="qr-card">
+                <span class="feature-tag">Retail / POS</span>
+                <h3>ODC ABS</h3>
+                <p style="font-size: 0.9rem; color: #888; margin: 15px 0;">Automated Business Solution. Touch-pad signatures. No double-booking.</p>
+                <a href="https://geemcneel-png.github.io/ODC_ABS/" class="btn btn-primary" target="_blank">💳 POS System</a>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="abs-demo">
-    <div class="container" style="text-align: center;">
-        <h2 class="section-title">Orion Business Core (ABS)</h2>
-        <p class="section-desc">The ultimate mobile POS. Capture customer details, enter custom products, sign digitally on-screen, and generate instant payment links.</p>
-        <div class="cta-group" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
-            <div class="qr-card">
-                <p style="color: #D4AF37; font-size: 0.8rem; margin-bottom: 10px; letter-spacing: 2px; font-weight: bold;">SCAN TO ENTER ABS</p>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=D4AF37&bgcolor=000000&data=https://geemcneel-png.github.io/ODC_ABS/" alt="POS QR" style="border: 1px solid #333; padding: 5px; background: #000; border-radius: 5px;">
+<section id="impact">
+    <div class="container">
+        <div class="founder-grid">
+            <img src="1000684212.jpg" alt="Graham Schubach" class="founder-img" onerror="this.src='https://via.placeholder.com/400x500?text=Graham+Schubach'">
+            <div>
+                <span class="feature-tag">Founder</span>
+                <h2 style="margin-bottom: 1rem;">Graham Schubach</h2>
+                <p class="quote">"Orion Dev Core exists to remove friction. AI should amplify human intent, not replace it."</p>
+                <div class="impact-box">
+                    <h3 style="color: var(--core-gold); margin-bottom: 10px;">The Sisanda Project</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 15px;">For every <strong>R1,500</strong> of revenue, we contribute <strong>R100</strong> toward R&D for AI-assisted learning for children with autism, inspired by Sisanda in Felekisi, Durban.</p>
+                    <p style="font-size: 0.8rem; color: var(--core-gold); font-weight: bold;">Scaling Gemini 2.0 Flash for specialized education.</p>
+                </div>
             </div>
-            <a href="https://geemcneel-png.github.io/ODC_ABS/" class="btn btn-primary" target="_blank" style="min-width: 250px;">💳 LAUNCH POS SYSTEM</a>
         </div>
     </div>
 </section>
 
-<section id="contact-form" style="background: #080808;">
+<section id="contact-form">
     <div class="container" style="text-align: center;">
-        <h2 class="section-title">Speak to ORION Now</h2>
-        <p class="section-desc">Let us design a bespoke automation solution for your business.</p>
-        <form class="contact-form" action="https://script.google.com/macros/s/AKfycbzng3-TTXLF06upce_qbB2_h3q8e-raAY_uW1wJeXUs7fn8VBQA3z3d9HPeMUplIWu21w/exec" method="GET" target="_blank">
-            <div class="form-group"><label>YOUR NAME</label><input type="text" name="name" class="form-control" required placeholder="John Doe"></div>
-            <div class="form-group"><label>EMAIL ADDRESS</label><input type="email" name="email" class="form-control" required placeholder="john@company.com"></div>
-            <div class="form-group"><label>CONTACT NUMBER</label><input type="tel" name="phone" class="form-control" required placeholder="+27 72..."></div>
-            <div class="form-group">
-                <label>TYPE OF BUSINESS</label>
-                <select name="package" class="form-control">
-                    <option value="Legal Firm">Legal Firm</option>
-                    <option value="Hospitality">Hospitality / Hotel</option>
-                    <option value="Retail / POS">Retail / POS</option>
-                    <option value="Custom Development">Custom Development</option>
-                </select>
-            </div>
-            <input type="hidden" name="message" value="Web Form Inquiry">
-            <button type="submit" class="btn btn-primary" style="width: 100%; font-weight: 800; letter-spacing: 2px;">BUILD MY SOLUTION</button>
+        <h2 class="section-title">Contact</h2>
+        <form class="contact-form" action="YOUR_APPS_SCRIPT_URL" method="GET">
+            <input type="text" name="name" class="form-control" placeholder="Name" required>
+            <input type="email" name="email" class="form-control" placeholder="Email" required>
+            <select name="package" class="form-control">
+                <option value="Legal">Legal Shield</option>
+                <option value="Hospitality">ZAR Hotel</option>
+                <option value="ABS">ODC ABS</option>
+                <option value="Investment Opportunities">Investment</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Build My Solution</button>
         </form>
     </div>
 </section>
 
-<section id="founder">
-    <div class="container">
-        <div class="founder-grid">
-            <img src="graham.jpg" alt="Graham Schubach" class="founder-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
-            <div style="display:none; width:100%; aspect-ratio:1; border:1px solid #D4AF37; align-items:center; justify-content:center; font-size:3rem; color:#D4AF37;">GS</div>
-            <div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Graham Schubach</h2>
-                <p style="color: var(--core-gold); margin-bottom: 2rem; letter-spacing: 2px;">FOUNDER & OWNER</p>
-                <p class="quote">"Orion Dev Core exists to remove friction between ideas and execution. I believe AI should amplify human intent, not replace it."</p>
-            </div>
-        </div>
+<div id="investorModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal('investorModal')">&times;</span>
+        <h2 style="color: var(--core-gold); border-bottom: 1px solid var(--core-gold); padding-bottom: 10px; margin-bottom: 20px;">Investor Summary</h2>
+        [span_1](start_span)[span_2](start_span)<p><strong>Founder Pedigree:</strong> 25 years in 5-star operations with proven 5-17% revenue growth[span_1](end_span)[span_2](end_span).</p>
+        <p style="margin: 15px 0;"><strong>The Edge:</strong> Gemini 2.0 Flash integration for automated legal filing and hospitality concierge services.</p>
+        <p><strong>Impact Model:</strong> Auditable R100/R1500 revenue-share for the Sisanda Project.</p>
+        <button onclick="closeModal('investorModal')" class="btn btn-primary" style="margin-top: 20px; width: 100%;">Connect with Graham</button>
     </div>
-</section>
+</div>
 
-<footer>
-    <div class="container">
-        <p>INTEGRITY BY DESIGN | PROFESSIONAL EXCELLENCE | UBUNTU | SUSTAINABLE INNOVATION</p>
-        <p style="margin-top: 2rem; font-size: 0.8rem;">© 2025 ORION DEV CORE | <span class="legal-link" onclick="openModal('popiaModal')">POPIA COMPLIANCE</span> | <span class="legal-link" onclick="openModal('slaModal')">SERVICE LEVEL AGREEMENT (SLA)</span></p>
-    </div>
+<footer style="text-align: center; padding: 40px 0; color: #555; font-size: 0.7rem; letter-spacing: 2px;">
+    <p>ORION DEV CORE | POPIA COMPLIANT | DESIGNED ON HONOR X6b</p>
 </footer>
-
-<div id="popiaModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal" onclick="closeModal('popiaModal')">&times;</span>
-        <h2 style="color: var(--core-gold); border-bottom: 1px solid var(--core-gold); padding-bottom: 10px;">POPIA Compliance Notice</h2>
-        <br><p><strong>1. Introduction</strong><br>We comply with the Protection of Personal Information Act No 4 of 2013 (POPIA).</p>
-        <br><p><strong>2. Information We Collect</strong><br>We collect Name, Email, and Phone solely for business communication.</p>
-        <br><p><strong>3. Security</strong><br>Our systems are hosted on secure, encrypted Google Cloud infrastructure.</p>
-        <br><p><strong>4. Your Rights</strong><br>You may ask us to update or delete your information at any time.</p>
-    </div>
-</div>
-
-<div id="slaModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal" onclick="closeModal('slaModal')">&times;</span>
-        <h2 style="color: var(--core-gold); border-bottom: 1px solid var(--core-gold); padding-bottom: 10px;">Service Level Agreement (SLA)</h2>
-        <br><p><strong>1. Service Availability</strong><br>Orion Dev Core guarantees a 99.9% uptime.</p>
-        <br><p><strong>2. Support Response Times</strong><br>Critical: 2 hours | General: 24 hours.</p>
-        <br><p><strong>3. Data Privacy</strong><br>We adhere to strict NDAs. Your client data remains your property.</p>
-    </div>
-</div>
 
 <script>
     function openModal(id) { document.getElementById(id).style.display = "block"; }
