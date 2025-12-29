@@ -19,7 +19,6 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 0 7%; }
         
         section { padding: 120px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.08); }
-        .section-title { font-size: clamp(2.2rem, 6vw, 3.2rem); text-align: center; margin-bottom: 1.5rem; color: #fff; }
 
         /* HEADER */
         header { padding: 140px 0 60px; text-align: center; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.06) 0%, transparent 70%); }
@@ -36,25 +35,20 @@
         .btn { 
             padding: 1.2rem 2.5rem; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-decoration: none; 
             border-radius: 2px; display: inline-flex; align-items: center; justify-content: center; gap: 12px; cursor: pointer; border: none; 
-            text-align: center; position: relative; overflow: hidden; 
+            text-align: center; position: relative; overflow: hidden; transition: 0.3s;
         }
 
         .btn-primary { background: var(--gold-gradient); color: #000; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 
-        /* THE LIGHT FLASH EFFECT */
         .btn-primary::after {
             content: ""; position: absolute; top: -50%; left: -100%; width: 50%; height: 200%;
             background: rgba(255, 255, 255, 0.4); transform: rotate(30deg);
             animation: shine 4s infinite;
         }
 
-        /* LOGO GRID */
-        .logo-row { display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 40px; flex-wrap: wrap; opacity: 0.8; }
-        .partner-logo { height: 35px; width: auto; filter: grayscale(100%) brightness(200%); }
-
         /* BIO & IMAGE FRAME */
         .bio-wrapper { display: flex; flex-direction: column; align-items: center; gap: 40px; }
-        .founder-img-frame { width: 100%; max-width: 380px; padding: 12px; border: 1px solid var(--core-gold); position: relative; }
+        .founder-img-frame { width: 100%; max-width: 380px; padding: 12px; border: 1px solid var(--core-gold); }
         .founder-img { width: 100%; height: auto; display: block; filter: grayscale(10%); }
         .article-body { color: #ccc; font-size: 1.05rem; line-height: 1.8; }
         .quote { font-style: italic; font-size: 1.4rem; color: #fff; border-left: 3px solid var(--core-gold); padding: 10px 0 10px 25px; margin: 40px 0; }
@@ -75,12 +69,6 @@
     <div class="container">
         <h1 class="hero-brand">ORION DEV CORE</h1>
         <p class="hero-subtitle">AI AMPLIFIES, I CREATE</p>
-        
-        <div class="logo-row">
-            <img src="1000672340.png" alt="Gemini AI" class="partner-logo" title="Powered by Gemini 2.0 Flash">
-            <img src="1000672341.png" alt="Google Pay" class="partner-logo" title="Google Pay Integrated">
-            <img src="1000672342.png" alt="Apple Pay" class="partner-logo" title="Apple Pay Integrated">
-        </div>
     </div>
 </header>
 
@@ -88,23 +76,23 @@
     <div class="container">
         <div class="bio-wrapper">
             <div class="founder-img-frame">
-                <img src="1000684212.jpg" alt="Graham Schubach" class="founder-img">
+                <img src="graham.jpg" alt="Graham Schubach" class="founder-img">
             </div>
             <div class="article-body">
-                <h2 style="color: #fff; margin-bottom: 25px; font-size: 2.2rem;">Rising from the Ashes</h2>
+                <h2 style="color: #fff; margin-bottom: 25px; font-size: 2.2rem; text-align: center;">Rising from the Ashes</h2>
                 
-                [span_0](start_span)[span_1](start_span)<p>August 2024 served as a definitive turning point for Graham Schubach[span_0](end_span)[span_1](end_span). After 25 years spent transforming service delivery for international 5-star brands, Graham leaned into his natural resilience to build something entirely new.</p>
+                <p>August 2024 served as a definitive turning point for Graham Schubach. [span_0](start_span)[span_1](start_span)[span_2](start_span)After 25 years spent transforming service delivery for international 5-star brands, Graham found himself at a sudden professional crossroads[span_0](end_span)[span_1](end_span)[span_2](end_span). [span_3](start_span)Rather than retreating, he leaned into his natural resilience to build something entirely new[span_3](end_span).</p>
                 
-                <p style="margin-top: 20px;">Guided by the philosophy <strong>"AI Amplifies. I Create,"</strong> Graham is leveraging deep expertise in user adoption to build digital tools that empower human intent.</p>
+                [span_4](start_span)<p style="margin-top: 20px;">Guided by the philosophy <strong>"AI Amplifies. I Create,"</strong> Graham is leveraging deep expertise in user adoption and complex problem-solving to build digital tools that empower human intent[span_4](end_span). [span_5](start_span)This company is a testament to the fact that the best way to predict the future is to create it—even when you start from nothing[span_5](end_span).</p>
 
                 <div class="quote">"Orion Dev Core exists to remove friction between ideas and execution. I believe AI should amplify human intent, not replace it."</div>
                 
                 <h3 style="color: var(--core-gold); margin-top: 40px; margin-bottom: 15px;">The Founder’s Log</h3>
-                <p>Orion Dev Core was born from strength. Every line of code was built entirely on an <strong>Honor X6b mobile phone</strong> in collaboration with <strong>Gemini AI</strong>. This stands as proof that excellence has no physical boundaries.</p>
+                <p>In a world of high-powered workstations, Orion Dev Core was born from a different kind of strength. Every line of code was built entirely on an <strong>Honor X6b mobile phone</strong> in collaboration with <strong>Gemini AI</strong>. [span_6](start_span)This stands as proof that with the right intent, excellence has no physical boundaries[span_6](end_span).</p>
 
                 <div style="background: rgba(212, 175, 55, 0.05); padding: 30px; border: 1px dashed var(--core-gold); border-radius: 8px; margin-top: 40px;">
                     <h3 style="color: var(--core-gold); margin-bottom: 12px; letter-spacing: 1px;">The Sisanda Project</h3>
-                    <p style="font-size: 0.95rem; color: #bbb;">Inspired by Sisanda, an 11-year-old boy from Felekisi, Durban. For every <strong>R1,500</strong> received, we contribute <strong>R100</strong> toward R&D for AI-assisted learning tools for children with autism.</p>
+                    <p style="font-size: 0.95rem; color: #bbb;">Inspired by Sisanda, an 11-year-old boy in Grade 4 from Felekisi, Durban. For every <strong>R1,500</strong> of revenue, we contribute <strong>R100</strong> toward R&D for AI-assisted learning tools specifically designed for children with autism.</p>
                 </div>
             </div>
         </div>
@@ -118,21 +106,21 @@
             <div class="product-card">
                 <span class="tag">GEMINI 2.0 FLASH</span>
                 <h3>Orion Legal Shield</h3>
-                <p style="margin-top: 15px; color: #888;">Automated filing assistant with PDF export and integrated lead capture.</p>
+                <p style="margin-top: 15px; color: #888;">Automated filing assistant featuring a prescription dates manager, PDF export, and integrated lead capture.</p>
                 <a href="https://wa.me/27724971810" class="btn btn-primary">Launch Legal AI</a>
             </div>
 
             <div class="product-card">
                 <span class="tag">OPERATIONAL CORE</span>
                 <h3>ODC ABS</h3>
-                <p style="margin-top: 15px; color: #888;">Mobile POS with digital signatures and conflict-free calendar booking.</p>
+                <p style="margin-top: 15px; color: #888;">Mobile POS featuring custom invoicing, digital signatures, and automated conflict-free calendar booking.</p>
                 <a href="https://geemcneel-png.github.io/ODC_ABS/" target="_blank" class="btn btn-primary">Launch Live POS</a>
             </div>
 
             <div class="product-card">
                 <span class="tag">GEMINI 2.0 FLASH</span>
                 <h3>Orion Concierge</h3>
-                <p style="margin-top: 15px; color: #888;">Live guest chat and bookings with nuanced response speed.</p>
+                <p style="margin-top: 15px; color: #888;">Live guest chat and bookings. Powered by Gemini 2.0 Flash for instantaneous, nuanced responses.</p>
                 <a href="https://script.google.com/macros/s/AKfycbys8jhnh8y9R_hsVK8E5su2d7PFhZUqUsJizatM2IZ5tpmP7pr-tYxhI6GDS7LHTUC3/exec" target="_blank" class="btn btn-primary">Launch Hotel Demo</a>
             </div>
         </div>
@@ -147,12 +135,12 @@
         <p style="font-size: 1.2rem; color: var(--core-gold);">✉️ graham@oriondevcore.com</p>
 
         <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-top: 40px;">
-            <a href="https://wa.me/27724971810" class="btn btn-wa" style="background:#25D366; color:#fff; width:100%; max-width:350px;">
+            <a href="https://wa.me/27724971810" class="btn" style="background:#25D366; color:#fff; width:100%; max-width:350px;">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="20"> CHAT ON WHATSAPP
             </a>
-            <button class="btn btn-primary" style="width:100%; max-width:350px; background:transparent; border:1px solid var(--core-gold); color:var(--core-gold);">
-                📖 READ OUR STORY
-            </button>
+            <a href="#the-story" class="btn btn-primary" style="width:100%; max-width:350px; background:transparent; border:1px solid var(--core-gold); color:var(--core-gold);">
+                📖 OUR STORY
+            </a>
         </div>
     </div>
 </section>
@@ -169,4 +157,5 @@
 </footer>
 
 </body>
-    </html>
+</html>
+
