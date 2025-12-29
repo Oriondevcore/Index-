@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Orion Dev Core | Powered by Gemini 2.0 Flash">
+    <meta name="description" content="Orion Dev Core | AI Amplifies. I Create.">
     <title>ORION DEV CORE | AI Amplifies. I Create.</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -11,132 +11,127 @@
         :root {
             --obsidian: #050505;
             --core-gold: #D4AF37;
-            --soft-gold: #b38728;
-            --glass: rgba(255, 255, 255, 0.03);
             --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 70%, #aa771c 100%);
+            --glass: rgba(255, 255, 255, 0.03);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
         body { background-color: var(--obsidian); color: #ffffff; font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
         h1, h2, h3 { font-family: 'Bodoni Moda', serif; font-weight: 700; letter-spacing: 1px; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
         
-        /* BUTTONS */
-        .btn { padding: 1.2rem 2rem; text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-decoration: none; transition: 0.4s; border-radius: 4px; display: inline-block; cursor: pointer; border: none; text-align: center; }
-        .btn-primary { background: var(--gold-gradient); color: #000; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3); width: 100%; max-width: 300px; }
-        .btn-invest { background: transparent; color: var(--core-gold); border: 1px solid var(--core-gold); margin-top: 15px; width: 100%; max-width: 300px; }
+        /* HEADER */
+        header { padding: 100px 0 40px; text-align: center; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, transparent 70%); }
+        .hero-brand { font-size: clamp(2.5rem, 8vw, 4rem); background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 5px; }
+        .hero-subtitle { color: var(--core-gold); font-style: italic; font-size: 1.2rem; margin-top: 10px; letter-spacing: 2px; }
 
-        /* SECTIONS */
-        section { padding: 80px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
-        .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; }
-        .section-desc { color: #aaa; max-width: 700px; margin: 0 auto 3rem auto; text-align: center; font-weight: 300; }
+        /* FOUNDER SECTION */
+        .founder-img { width: 100%; max-width: 400px; border: 1px solid var(--core-gold); box-shadow: 15px 15px 0px rgba(212, 175, 55, 0.1); margin: 0 auto; display: block; }
+        .quote { font-style: italic; font-size: 1.3rem; color: #eee; border-left: 3px solid var(--core-gold); padding-left: 20px; margin: 2rem 0; }
 
         /* PRODUCT CARDS */
-        .qr-card { background: rgba(10,10,10,0.9); padding: 25px; border: 1px solid var(--core-gold); border-radius: 12px; text-align: center; margin-bottom: 2rem; }
-        .feature-tag { font-size: 0.7rem; color: var(--core-gold); letter-spacing: 2px; text-transform: uppercase; font-weight: bold; margin-bottom: 10px; display: block; }
-
-        /* FOUNDER & IMPACT */
-        .founder-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start; }
-        .founder-img { width: 100%; border: 1px solid var(--core-gold); }
-        .quote { font-style: italic; font-size: 1.4rem; color: #eee; border-left: 3px solid var(--core-gold); padding-left: 20px; margin-bottom: 2rem; }
-        .impact-box { background: rgba(212,175,55,0.05); padding: 25px; border-radius: 8px; border: 1px dashed var(--core-gold); }
-
-        /* FORM */
-        .contact-form { background: var(--glass); padding: 30px; border: 1px solid rgba(212, 175, 55, 0.3); max-width: 600px; margin: 0 auto; }
-        .form-control { width: 100%; padding: 15px; background: #0a0a0a; border: 1px solid #333; color: #fff; margin-bottom: 20px; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .product-card { background: rgba(10,10,10,0.95); padding: 35px; border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 12px; transition: 0.4s; position: relative; overflow: hidden; }
+        .product-card:hover { border-color: var(--core-gold); transform: translateY(-5px); }
+        .price-tag { display: block; color: var(--core-gold); font-weight: 700; font-size: 1.2rem; margin: 15px 0; border-top: 1px solid #333; padding-top: 15px; }
+        
+        /* BUTTONS */
+        .btn { padding: 1rem 2rem; text-transform: uppercase; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-decoration: none; transition: 0.4s; border-radius: 4px; display: inline-block; cursor: pointer; border: none; text-align: center; width: 100%; }
+        .btn-primary { background: var(--gold-gradient); color: #000; margin-top: 20px; }
+        .btn-invest { background: transparent; color: var(--core-gold); border: 1px solid var(--core-gold); margin-top: 15px; }
 
         /* MODALS */
-        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
-        .modal-content { background: #111; margin: 10% auto; padding: 40px; border: 1px solid var(--core-gold); width: 90%; max-width: 800px; }
-        .close-modal { color: var(--core-gold); float: right; font-size: 28px; cursor: pointer; }
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); }
+        .modal-content { background: #111; margin: 10% auto; padding: 40px; border: 1px solid var(--core-gold); width: 90%; max-width: 600px; }
 
-        @media (max-width: 768px) { .founder-grid { grid-template-columns: 1fr; } .hero-brand { font-size: 2.5rem; } }
+        @media (max-width: 768px) { .hero-brand { font-size: 2.8rem; } }
     </style>
 </head>
 <body>
 
-<section id="hero" style="text-align: center; padding-top: 120px;">
+<header>
     <div class="container">
-        <h1 class="hero-brand" style="background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 3.5rem;">ORION DEV CORE</h1>
-        <p style="color: var(--core-gold); font-style: italic; font-size: 1.2rem; margin-bottom: 2rem;">AI Amplifies. I Create.</p>
-        <p class="section-desc">Harnessing 25 years of operational excellence to deliver high-speed business solutions powered by Gemini 2.0 Flash.</p>
-        
-        <div class="qr-card" style="max-width: 350px; margin: 0 auto;">
-            <span class="feature-tag">Legal Shield AI Demo</span>
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&color=D4AF37&bgcolor=0a0a0a&data=https://script.google.com/macros/s/AKfycbytAzynBe72THD6a74fb3onNADJ58UHRxtMRh3hJiCygrq498K9qH2L_8PVAmw6NQUV/exec?mode=demo" alt="QR" style="margin-bottom: 20px;">
-            <a href="https://script.google.com/macros/s/AKfycbytAzynBe72THD6a74fb3onNADJ58UHRxtMRh3hJiCygrq498K9qH2L_8PVAmw6NQUV/exec?mode=demo" class="btn btn-primary" target="_blank">📱 Launch Legal AI</a>
-            <button class="btn btn-invest" onclick="openModal('investorModal')">📈 Investment Opportunities</button>
+        <h1 class="hero-brand">ORION DEV CORE</h1>
+        <p class="hero-subtitle">AI AMPLIFIES, I CREATE</p>
+    </div>
+</header>
+
+<section id="bio">
+    <div class="container" style="max-width: 900px;">
+        <img src="1000684212.jpg" alt="Graham Schubach" class="founder-img" onerror="this.src='https://via.placeholder.com/400x500?text=Graham+Schubach'">
+        <div style="margin-top: 3rem;">
+            <h2 style="color: var(--core-gold); letter-spacing: 2px;">THE VISIONARY PATH</h2>
+            <p style="margin-top: 1.5rem; color: #ccc;">After 25 years transforming service for 5-star international brands, I reached a crossroads in August 2024. I chose to amplify human intent rather than replace it. Orion Dev Core is the culmination of that journey—bringing elite operational discipline to the frontier of AI.</p>
+            <p class="quote">"Orion Dev Core exists to remove friction between ideas and execution. I believe AI should amplify human intent, not replace it."</p>
+            <div style="background: rgba(212,175,55,0.05); padding: 25px; border: 1px dashed var(--core-gold); border-radius: 8px;">
+                <h3 style="color: var(--core-gold);">The Sisanda Project</h3>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Inspired by Sisanda, an 11-year-old boy in Grade 4 in Felekisi, Durban. For every <strong>R1,500</strong> of revenue, we contribute <strong>R100</strong> toward R&D for AI-assisted learning for children with autism.</p>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="products">
     <div class="container">
-        <h2 class="section-title">The Suite</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            <div class="qr-card">
-                <span class="feature-tag">Hospitality</span>
-                <h3>ZAR Hotel Concierge</h3>
-                <p style="font-size: 0.9rem; color: #888; margin: 15px 0;">Live chat & bookings powered by Gemini 2.0 Flash.</p>
-                <a href="https://script.google.com/macros/s/AKfycbys8jhnh8y9R_hsVK8E5su2d7PFhZUqUsJizatM2IZ5tpmP7pr-tYxhI6GDS7LHTUC3/exec" class="btn btn-primary" target="_blank">🛎️ Concierge Demo</a>
+        <h2 class="section-title">THE SUITE</h2>
+        <div class="card-grid">
+            <div class="product-card">
+                <span style="color:var(--core-gold); font-size:0.7rem; font-weight:bold; letter-spacing:2px;">GEMINI 2.0 FLASH</span>
+                <h3>ORION LEGAL SHIELD</h3>
+                <p style="font-size: 0.85rem; color: #888; margin-top: 15px;">Automated filing assistant with integrated prescription dates manager and PDF export.</p>
+                <span class="price-tag">$399 Setup | $149pm Maint.</span>
+                <a href="#" class="btn btn-primary">LAUNCH LEGAL AI</a>
             </div>
-            <div class="qr-card">
-                <span class="feature-tag">Retail / POS</span>
+
+            <div class="product-card">
+                <span style="color:var(--core-gold); font-size:0.7rem; font-weight:bold; letter-spacing:2px;">OPERATIONAL CORE</span>
                 <h3>ODC ABS</h3>
-                <p style="font-size: 0.9rem; color: #888; margin: 15px 0;">Automated Business Solution. Touch-pad signatures. No double-booking.</p>
-                <a href="https://geemcneel-png.github.io/ODC_ABS/" class="btn btn-primary" target="_blank">💳 POS System</a>
+                <p style="font-size: 0.85rem; color: #888; margin-top: 15px;">Automated Business Solution. Touch-pad digital signatures, conflict-free calendar appointments, and instant payment links.</p>
+                <span class="price-tag">$199 Once-off</span>
+                <a href="https://geemcneel-png.github.io/ODC_ABS/" class="btn btn-primary" target="_blank">EXPLORE POS</a>
             </div>
+
+            <div class="product-card">
+                <span style="color:var(--core-gold); font-size:0.7rem; font-weight:bold; letter-spacing:2px;">GEMINI 2.0 FLASH</span>
+                <h3>ORION CONCIERGE</h3>
+                <p style="font-size: 0.85rem; color: #888; margin-top: 15px;">Live chat for guest bookings and inquiries. Tailored to specific hotel amenities and local nuances.</p>
+                <span class="price-tag">From $149 Build</span>
+                <a href="https://script.google.com/macros/s/AKfycbys8jhnh8y9R_hsVK8E5su2d7PFhZUqUsJizatM2IZ5tpmP7pr-tYxhI6GDS7LHTUC3/exec" class="btn btn-primary" target="_blank">LAUNCH CONCIERGE</a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <button class="btn btn-invest" onclick="openModal('investModal')" style="max-width: 400px;">📈 VIEW INVESTMENT OPPORTUNITIES</button>
         </div>
     </div>
 </section>
 
-<section id="impact">
-    <div class="container">
-        <div class="founder-grid">
-            <img src="1000684212.jpg" alt="Graham Schubach" class="founder-img" onerror="this.src='https://via.placeholder.com/400x500?text=Graham+Schubach'">
-            <div>
-                <span class="feature-tag">Founder</span>
-                <h2 style="margin-bottom: 1rem;">Graham Schubach</h2>
-                <p class="quote">"Orion Dev Core exists to remove friction. AI should amplify human intent, not replace it."</p>
-                <div class="impact-box">
-                    <h3 style="color: var(--core-gold); margin-bottom: 10px;">The Sisanda Project</h3>
-                    <p style="font-size: 0.9rem; margin-bottom: 15px;">For every <strong>R1,500</strong> of revenue, we contribute <strong>R100</strong> toward R&D for AI-assisted learning for children with autism, inspired by Sisanda in Felekisi, Durban.</p>
-                    <p style="font-size: 0.8rem; color: var(--core-gold); font-weight: bold;">Scaling Gemini 2.0 Flash for specialized education.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact-form">
+<section id="contact">
     <div class="container" style="text-align: center;">
-        <h2 class="section-title">Contact</h2>
-        <form class="contact-form" action="YOUR_APPS_SCRIPT_URL" method="GET">
-            <input type="text" name="name" class="form-control" placeholder="Name" required>
-            <input type="email" name="email" class="form-control" placeholder="Email" required>
-            <select name="package" class="form-control">
-                <option value="Legal">Legal Shield</option>
-                <option value="Hospitality">ZAR Hotel</option>
-                <option value="ABS">ODC ABS</option>
-                <option value="Investment Opportunities">Investment</option>
+        <h2 class="section-title">SPEAK TO ORION</h2>
+        <form class="contact-form" style="background:var(--glass); padding: 40px; border-radius: 8px; max-width: 600px; margin: 0 auto;">
+            <input type="text" placeholder="YOUR NAME" style="width:100%; padding:15px; background:#111; border:1px solid #333; color:#fff; margin-bottom: 20px;">
+            <select style="width:100%; padding:15px; background:#111; border:1px solid #333; color:#fff; margin-bottom: 20px;">
+                <option>SELECT YOUR SOLUTION</option>
+                <option>LEGAL SHIELD</option>
+                <option>ODC ABS</option>
+                <option>ORION CONCIERGE</option>
             </select>
-            <button type="submit" class="btn btn-primary">Build My Solution</button>
+            <button type="submit" class="btn btn-primary">BUILD MY SOLUTION</button>
         </form>
     </div>
 </section>
 
 <div id="investorModal" class="modal">
     <div class="modal-content">
-        <span class="close-modal" onclick="closeModal('investorModal')">&times;</span>
-        <h2 style="color: var(--core-gold); border-bottom: 1px solid var(--core-gold); padding-bottom: 10px; margin-bottom: 20px;">Investor Summary</h2>
-        [span_1](start_span)[span_2](start_span)<p><strong>Founder Pedigree:</strong> 25 years in 5-star operations with proven 5-17% revenue growth[span_1](end_span)[span_2](end_span).</p>
-        <p style="margin: 15px 0;"><strong>The Edge:</strong> Gemini 2.0 Flash integration for automated legal filing and hospitality concierge services.</p>
-        <p><strong>Impact Model:</strong> Auditable R100/R1500 revenue-share for the Sisanda Project.</p>
-        <button onclick="closeModal('investorModal')" class="btn btn-primary" style="margin-top: 20px; width: 100%;">Connect with Graham</button>
+        <span style="float:right; color:var(--core-gold); cursor:pointer; font-size:24px;" onclick="closeModal('investorModal')">&times;</span>
+        <h2 style="color:var(--core-gold);">INVESTMENT SUMMARY</h2>
+        <p style="margin-top:20px; font-size:0.9rem;">Orion Dev Core is seeking seed capital to scale our Gemini 2.0 Flash architecture across the SADC region. We operate on a high-margin B2B SaaS model with a built-in auditable impact pledge for the Sisanda Project.</p>
+        <button class="btn btn-primary" style="margin-top:20px;">REQUEST PITCH DECK</button>
     </div>
 </div>
 
-<footer style="text-align: center; padding: 40px 0; color: #555; font-size: 0.7rem; letter-spacing: 2px;">
-    <p>ORION DEV CORE | POPIA COMPLIANT | DESIGNED ON HONOR X6b</p>
+<footer style="padding: 50px 0; text-align: center; font-size: 0.7rem; color: #555; border-top: 1px solid rgba(212,175,55,0.05);">
+    <p>ORION DEV CORE | POPIA COMPLIANT | © 2025 ALL RIGHTS RESERVED</p>
+    <p style="margin-top: 10px;">DESIGNED ON HONOR X6b</p>
 </footer>
 
 <script>
@@ -147,4 +142,3 @@
 
 </body>
 </html>
-
