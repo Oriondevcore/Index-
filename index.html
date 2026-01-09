@@ -1,142 +1,269 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orion Dev Core | AI Amplifies. I Create.</title>
+    <title>ORION DEV CORE - AI Amplifies. I Create.</title>
     
-    <meta name="description" content="Orion Dev Core - Home of Orion Legal Suite, Orion Hotel AI, and Orion mPOS. Led by Graham Schubach. AI Amplifies. I Create.">
-    <meta name="keywords" content="Orion Dev Core, Orion Legal Suite, Orion Hotel, Orion mPOS, Graham Schubach, AI Automation South Africa">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Space Grotesk', 'sans-serif'],
-                    },
-                    colors: {
-                        void: '#020617',      /* Background */
-                        nebula: '#2E9AFE',    /* The Orion Bolt Blue */
-                        gold: '#C5A059',      /* For Legal/Hotel accents */
-                        surface: '#0f172a',
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 1))",
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
-        /* Custom Neon Effects for the Bolt */
-        .bolt-glow {
-            filter: drop-shadow(0 0 8px rgba(46, 154, 254, 0.8)) drop-shadow(0 0 15px rgba(46, 154, 254, 0.4));
+        /* --- CORE VARIABLES --- */
+        :root {
+            --bg-dark: #0a0e27;
+            --bg-card: #12182e;
+            --accent-blue: #00d4ff;
+            --accent-purple: #7b2cbf;
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+            --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-        .gold-glow {
-            text-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+
+        /* --- RESET & BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-        .glass-panel {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+
+        h1, h2, h3, h4 { font-family: 'Bodoni Moda', serif; font-weight: 700; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* --- BACKGROUND ANIMATION (CONSTELLATION) --- */
+        .bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.15; pointer-events: none; }
+        .constellation {
+            position: absolute; width: 2px; height: 2px; background: var(--accent-blue); border-radius: 50%;
+            animation: twinkle 4s infinite ease-in-out;
+        }
+        @keyframes twinkle { 0%, 100% { opacity: 0.1; } 50% { opacity: 0.8; box-shadow: 0 0 10px var(--accent-blue); } }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 1.5rem 5%;
+            background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(10px);
+            z-index: 1000; border-bottom: 1px solid rgba(0, 212, 255, 0.05);
+        }
+        nav .container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Bodoni Moda', serif; font-size: 1.4rem; font-weight: 700; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-secondary); font-size: 0.9rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        /* --- LAYOUT UTILS --- */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+        .section-title { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding-top: 80px;
+        }
+        .hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 1rem; }
+        .hero .subtitle { 
+            font-family: 'Bodoni Moda', serif; font-size: 1.8rem; 
+            color: var(--accent-blue); font-style: italic; margin-bottom: 2rem; 
+        }
+        .hero .tagline { font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem; }
+        
+        .btn {
+            padding: 1rem 2.5rem; border-radius: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;
+            display: inline-block; margin: 10px;
+        }
+        .btn-primary { background: var(--gradient); color: white; box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(118, 75, 162, 0.6); }
+        .btn-secondary { border: 1px solid var(--accent-blue); color: var(--accent-blue); }
+        .btn-secondary:hover { background: var(--accent-blue); color: var(--bg-dark); }
+
+        /* --- SECTORS (UPDATED WITH LOGOS) --- */
+        .sector-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;
+        }
+        .sector-card {
+            background: var(--bg-card); padding: 30px; border-radius: 12px;
+            border: 1px solid rgba(0, 212, 255, 0.1); transition: all 0.3s ease;
+            text-align: center; cursor: pointer;
+        }
+        .sector-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+        }
+        .card-image-container {
+            width: 100%; height: 200px; margin-bottom: 20px;
+            border-radius: 8px; overflow: hidden; background: #000;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .card-image-container img {
+            width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s;
+        }
+        .sector-card:hover img { transform: scale(1.05); }
+        
+        /* Specific fix for the transparent Bolt icon */
+        .icon-fit img { width: 50%; height: auto; object-fit: contain; }
+
+        .sector-card h3 { font-size: 1.5rem; margin-bottom: 10px; color: var(--text-primary); }
+        .sector-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
+        .sector-link { color: var(--accent-blue); font-weight: 600; font-size: 0.9rem; }
+
+        /* --- FOUNDER SECTION --- */
+        .founder-content {
+            display: flex; align-items: center; gap: 50px; max-width: 900px; margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03); padding: 40px; border-radius: 20px;
+        }
+        .founder-initials {
+            width: 150px; height: 150px; background: var(--gradient); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Bodoni Moda', serif; font-size: 3rem; color: white; border: 4px solid var(--accent-blue);
+            flex-shrink: 0;
+        }
+        .founder-text h3 { font-size: 2rem; margin-bottom: 5px; }
+        .founder-text .title { color: var(--accent-blue); margin-bottom: 20px; font-style: italic; }
+        .contact-details { margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        .contact-details p { margin: 5px 0; color: var(--text-secondary); }
+        .contact-details a:hover { color: var(--accent-blue); }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #050714; padding: 50px 0 20px; border-top: 1px solid rgba(255,255,255,0.05);
+            text-align: center; font-size: 0.9rem; color: var(--text-secondary);
+        }
+        .footer-logo { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; color: white; margin-bottom: 10px; display: block;}
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero .subtitle { font-size: 1.2rem; }
+            .founder-content { flex-direction: column; text-align: center; }
+            .nav-links { display: none; } /* Simplified for mobile */
         }
     </style>
 </head>
-<body class="bg-void text-slate-300 font-sans antialiased selection:bg-nebula selection:text-white">
+<body>
 
-    <nav class="fixed w-full z-50 glass-panel border-b border-white/5" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-24">
-                <div class="flex-shrink-0 cursor-pointer flex items-center gap-3">
-                    <div class="text-3xl text-nebula bolt-glow">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-display font-bold text-2xl text-white tracking-wide leading-none">
-                            ORION
-                        </span>
-                        <span class="text-xs text-nebula tracking-[0.2em] font-semibold">DEV CORE</span>
-                    </div>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-center space-x-8">
-                        <a href="#home" class="text-white hover:text-nebula transition-colors text-sm font-medium">Home</a>
-                        <a href="#products" class="text-slate-300 hover:text-nebula transition-colors text-sm font-medium">Our Suite</a>
-                        <a href="#contact" class="bg-nebula/10 border border-nebula/50 text-nebula hover:bg-nebula hover:text-white px-5 py-2 rounded-full text-sm font-bold transition-all shadow-[0_0_15px_rgba(46,154,254,0.3)]">
-                            Contact Graham
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <div class="bg-animation">
+        <div class="constellation" style="left: 10%; top: 20%; animation-delay: 0s;"></div>
+        <div class="constellation" style="left: 30%; top: 50%; animation-delay: 1s;"></div>
+        <div class="constellation" style="left: 70%; top: 10%; animation-delay: 2s;"></div>
+        <div class="constellation" style="left: 80%; top: 80%; animation-delay: 0.5s;"></div>
+        <div class="constellation" style="left: 50%; top: 50%; animation-delay: 1.5s;"></div>
+        <div class="constellation" style="left: 20%; top: 70%; animation-delay: 2.5s;"></div>
+        <div class="constellation" style="left: 90%; top: 30%; animation-delay: 3s;"></div>
+        <div class="constellation" style="left: 40%; top: 10%; animation-delay: 1.2s;"></div>
+    </div>
+
+    <nav>
+        <div class="container">
+            <div class="logo">ORION DEV CORE</div>
+            <ul class="nav-links">
+                <li><a href="#sectors">Products</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-             <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" 
-                 alt="Digital Bolt Energy" 
-                 class="w-full h-full object-cover opacity-20">
-            <div class="absolute inset-0 bg-hero-pattern"></div>
-        </div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            
-            <div class="mb-8 animate-pulse">
-                <i class="fa-solid fa-bolt text-7xl md:text-9xl text-nebula bolt-glow"></i>
-            </div>
-
-            <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 tracking-tight">
-                AI AMPLIFIES. <br />
-                <span class="text-nebula bolt-glow">I CREATE.</span>
-            </h1>
-            
-            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400 mb-10 font-light">
-                Bridging the gap between artificial intelligence and human innovation. 
-                Home of the Orion Suite.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#products" class="px-8 py-4 rounded-lg bg-nebula hover:bg-blue-600 text-white font-bold text-lg transition-all shadow-[0_0_20px_rgba(46,154,254,0.4)]">
-                    View Products
-                </a>
+    <section class="hero">
+        <div class="container">
+            <h1>ORION DEV CORE</h1>
+            <p class="subtitle">AI Amplifies. I Create.</p>
+            <p class="tagline">Building the next generation of AI-driven business solutions. From hospitality concierges to legal automation.</p>
+            <div>
+                <a href="#sectors" class="btn btn-primary">View Ecosystem</a>
+                <a href="#contact" class="btn btn-secondary">Contact Founder</a>
             </div>
         </div>
     </section>
 
-    <section id="products" class="py-24 bg-void relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">The Orion Suite</h2>
-                <div class="w-24 h-1 bg-nebula mx-auto rounded-full bolt-glow"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section id="sectors">
+        <div class="container">
+            <h2 class="section-title">The Orion Ecosystem</h2>
+            <div class="sector-grid">
                 
-                <div class="group bg-surface border border-slate-800 hover:border-gold/50 p-8 rounded-2xl relative overflow-hidden transition-all duration-300 hover:-translate-y-2">
-                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                        <i class="fa-solid fa-scale-balanced text-9xl text-gold"></i>
+                <div class="sector-card" onclick="alert('Demo: Redirecting to Hotel AI...')">
+                    <div class="card-image-container">
+                        <img src="1000693258.jpg" alt="Orion Hotel AI">
                     </div>
-                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-900 to-transparent rounded-xl flex items-center justify-center mb-6 border border-gold/30">
-                        <i class="fa-solid fa-gavel text-3xl text-gold"></i>
+                    <h3>Orion Hotel</h3>
+                    <p>Digital AI Concierge. 24/7 Multi-lingual guest support for bookings, room service, and info.</p>
+                    <span class="sector-link">Launch Hotel AI &rarr;</span>
+                </div>
+
+                <div class="sector-card" onclick="alert('Demo: Redirecting to Legal Suite...')">
+                    <div class="card-image-container">
+                        <img src="1000693249.jpg" alt="Orion Legal Suite">
                     </div>
+                    <h3>Orion Legal Suite</h3>
+                    <p>Automated client intake, prescription deadline tracking, and document generation.</p>
+                    <span class="sector-link">Launch Legal AI &rarr;</span>
+                </div>
+
+                <div class="sector-card" onclick="alert('Demo: Redirecting to mPOS...')">
+                    <div class="card-image-container">
+                        <img src="1000693247.jpg" alt="Orion mPOS">
+                    </div>
+                    <h3>Orion mPOS</h3>
+                    <p>Full automated business solution with credit card payment links and invoicing.</p>
+                    <span class="sector-link">View Solution &rarr;</span>
+                </div>
+
+                <div class="sector-card" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    <div class="card-image-container icon-fit">
+                        <img src="icon-512.png" alt="Custom Solutions">
+                    </div>
+                    <h3>Custom Automation</h3>
+                    <p>Bespoke AI receptionists, Apps Script workflows, and SaaS platforms for your business.</p>
+                    <span class="sector-link">Start Building &rarr;</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="mission" style="background: rgba(18, 24, 46, 0.5);">
+        <div class="container" style="text-align: center; max-width: 800px;">
+            <h2 class="section-title">Our Mission</h2>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); font-weight: 300;">
+                "Orion Dev Core exists to remove friction between ideas and execution. 
+                We believe AI should amplify human intent, not replace it. 
+                We build systems that make businesses more capable, more secure, and more human."
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="founder-content">
+                <div class="founder-initials">GS</div>
+                <div class="founder-text">
+                    <h3>Graham Schubach</h3>
+                    <p class="title">CEO — Orion Dev Core</p>
+                    <p>Ready to automate your workflow? Let's chat directly.</p>
                     
-                    <h3 class="text-2xl font-display font-bold text-white mb-2">ORION <span class="text-gold">LEGAL</span></h3>
-                    <p class="text-xs font-bold text-gold uppercase tracking-wider mb-4">Legal Automation</p>
-                    
-                    <p class="text-slate-400 mb-6 leading-relaxed">
-                        Complete legal automation supporting all 11 Official SA Languages. Streamline contracts, compliance, and communication.
-                    </p>
-                    
-                    <ul class="space-y-2 mb-6 text-sm text-slate-500">
-                        <li class="flex items-center gap-2
- 
+                    <div class="contact-details">
+                        <p>📧 <a href="mailto:graham@oriondevcore.com">graham@oriondevcore.com</a></p>
+                        <p>📱 <a href="tel:+27724971810">+27 72 497 1810</a></p>
+                        <p>💬 <a href="https://wa.me/27703080516">WhatsApp Business</a></p>
+                        <p>🌐 <a href="https://www.oriondevcore.com">www.oriondevcore.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">ORION DEV CORE</span>
+            <p>&copy; 2025 Orion Dev Core. All rights reserved.</p>
+            <p style="opacity: 0.5; margin-top: 5px; font-size: 0.8rem;">Bootstrapped in Amanzimtoti, South Africa 🇿🇦</p>
+        </div>
+    </footer>
+
+</body>
+</html>
